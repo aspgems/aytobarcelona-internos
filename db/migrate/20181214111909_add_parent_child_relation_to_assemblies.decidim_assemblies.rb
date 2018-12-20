@@ -3,7 +3,7 @@
 
 class AddParentChildRelationToAssemblies < ActiveRecord::Migration[5.1]
   def change
-    unless true || extension_enabled?("ltree")
+    unless extension_enabled?("ltree")
       begin
         # required so that test suite works in ci env
         enable_extension "ltree"
