@@ -8,8 +8,11 @@ gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
 
 gem "decidim", "0.15.1"
-# gem "decidim-consultations", "0.15.1"
-# gem "decidim-initiatives", "0.15.1"
+gem "decidim-consultations", "0.15.1"
+gem "decidim-initiatives", "0.15.1"
+gem 'decidim-sortitions', "0.15.1"
+gem 'decidim-verifications', "0.15.1"
+gem 'decidim-debates', "0.15.1"
 
 gem "bootsnap", "~> 1.3"
 

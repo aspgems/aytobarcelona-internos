@@ -34,3 +34,5 @@
 public/uploads
 
 .idea
+
+.capistrano
