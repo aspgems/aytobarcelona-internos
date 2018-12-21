@@ -1,13 +1,13 @@
 default: &default
-  _secure_geocoder_lookup_app_id: nyOQJB9xxayUR4Of86+kvTTfxWyl+Lx0EAnYZOGUeyTb1UDXu7mnUWDA5ahw7JVYWzP11MORtxDvPU86ppTtSyN3TJ3hBPF4ZHDBOYzF1CKxTo0hOH4BTj/5TfGJnGRiwY2IUR8dagvqog5sGHu/Aav9sbXjQF1bOXtE/KKjYZAob16hgduXwErPQ4azoNHIgr+nVJWyuXnIOpQMQWWsZU2nOvsdvT7LZwtPj9hqTPzNE4nh/Vq5G8Fg4rjRmavZYzGNzFOY9TK0YnHkw4j1p70eBZnX2GutxXwqrOnZtWCz7Iv6ft2F6L+RYxR7lVwgfkqDjmdgSEZ0zH3iXM2obw==
-  _secure_geocoder_lookup_app_code: jg2WazA4Rd84TBznOi6/KYbLVB0VmYxQFMXV+TSttgKpQN51KdLi6mWlVG+m3O/qDmAX8Duji9Mp2f/VXWTvSzgxazhklj142Zb5c/lJOBjwXVRcq4RtkciOIKjmUuGlTAaKRrmDCSiAAEW7YKU9U5Iq57hkQx/xdbqVWW9ntIp/0/utmhFdc1pDDPlhjfIQnHPfYgcLREViFQdyY1uuAFXVk8GPdP9/gcC9LYdgFSyqWA5lqWmhSpAGPNh5kzRKAwEGzvxa1hqCXLCiYvHqHmPfO0b5WzRq4xLXXkEd4djaG9R+A3mbDb/76D0i0900Gve6+KNiAeDHM7Vahm6qWg==
+  geocoder_lookup_app_id: xxx
+  geocoder_lookup_app_code: xxx
 
   smtp:
-    _secure_username:
-    _secure_password:
-    _secure_address: SkTYUq4er+hm5P5951RwkXYZTIu/B7MWNyoTkRZUSH5HIOofugZRQ8R78nbqlQGr36oaWZplutoUi9a8dzRifFKtRVT8U5Mvla4YTOa5RB9XG7bwWrHR7DoaciSoZm8vrV/1a/q6MTLHC5n2e4r0t6mfD+72JUfQPhshQ7brEs7hYv2ORSM0U2WwriZkO+ABJzGsP921zmAE+EVUnSITOg/2YcFyC/duhQmxkKjsVkHWSv4zNqOW2hp0W1b4uh/QZdhzFP4FmUloFgaeQeWbhnSXsIDUp6ePxWddaBRqNoCUnhLR+NCPnu77B1pM1Qs4CMFNPTgipRgHkqBXv6ImpQ==
-    _secure_domain: bt5cCs9AbJiXsjOJJSwTiqNQW2KAIGSR1sQY37dW+7QOV1oZ4rOjsXyNfQ5vbt5MEQ+w2lMC2Km+BekL8x/nOwDx8JQqAR+GIX79pRTr8aOysofv/yhGKXBvpRhxxlvucSyZ2hvIJuoK37nyyuveN1qZH6ocVBKBTptmOdydwyvJkbO/GJCy4vIWy+PBB+FKCRp0UlPfrThdFZlDMLbpzCbdKv/qno5VXZ30YeUhzTWfEq+2X/8pKxageuGg3TGyZOlBOuxBv7+QXBkeuKOzexU1fv1BKXQY3fetPZK6ONvxx/CKjU7NCp6cLLiXZks+19nTCRy4zrbhXCwrTcdJmw==
-    _secure_port: 25
+    username:
+    password:
+    address: localhost
+    domain: example.com
+    port: 25
 
 development:
   <<: *default

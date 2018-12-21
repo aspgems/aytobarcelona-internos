@@ -10,7 +10,7 @@ role :db,  %w(decidimbcn-int.aspgems.com)
 
 set :app_env, 'master'     # Name used in rollbar/hipchat, etc
 set :branch,   fetch(:app_env)  # Git branch deployed
-set :instance, fetch('staging')   # Deploy extra files from script/deploy/<instance>
+set :instance, 'staging'   # Deploy extra files from script/deploy/<instance>
 set :bundle_without, %w{development}.join(' ')  
 
 # Extended Server Syntax
