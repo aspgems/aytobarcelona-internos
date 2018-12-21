@@ -36,3 +36,5 @@ public/uploads
 .idea
 
 .capistrano
+
+config/*-development.yml
