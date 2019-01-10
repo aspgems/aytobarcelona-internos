@@ -3,7 +3,7 @@
 require 'omniauth-oauth2'
 require 'open-uri'
 
-module Omniauth
+module OmniAuth
   module Strategies
     # Omniauth client for Imipre
     class Imipre < OmniAuth::Strategies::OAuth2

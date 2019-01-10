@@ -3,7 +3,7 @@
 module OmniAuth
   module Strategies
     # tell OmniAuth to load our strategy
-    autoload :Imipre, 'lib/omniauth/strategies/imipre'
+    autoload :Imipre, Rails.root.join('lib', 'imipre_strategy')
   end
 end
 
