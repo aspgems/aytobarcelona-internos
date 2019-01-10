@@ -8,6 +8,14 @@ default: &default
     address: localhost
     domain: example.com
     port: 25
+  
+  imipre:
+    _secure_client_id: QJ++QBy+UHPeCf3lduM2OBCBqLjo8vNyEBi55Azci+QcaMo2ZmyHFqV52p/igrCjMp1ssLPYZ8flZRS8R9qaA2/Z6PywbZMlU+HLasmNR5HPw57FDezAfpFQs3U5H+uIWIHA5DNMTiDgmvdBqGRT6wja/alTbiAl/Mt84V+CYlsloHP3kbaug5Agnb2z+RJaTnm0OOSl6L7aVeQMJQgVgD7roVU5nCkHoYmV1/llrcwBbtYahQNLbmm7pJiyMnZG9Ep4kM6REOIOkKCTOFP2nTTVzO6sxxtsXysxgFePl4Ijl1wta4Y2lXImWlzBATU7w5rqdRxe8eyf/18gGgPLOg==
+    _secure_client_secret: BImiX6USuZK/G7AM6iMM8na6r0bV2mpoT/KmhR+paV0v51NGYsWsAgqkADgKFpSMLuipv+Z290otzMPlREvQChs2f3mEJktAoi50bVBfv0P7Z+aRdTO8K2q6xJiBIwxwzJIw7s8L3CALWHPXhVxYR3xDEeKiv10jW8hOqT7c/bReN5DQ+5sw8GJPg8RQa0IlCjqZXZ2mtN49AjJ+aTSShbSlxD60Pa5nwEe8ZdLKJg+gqLfDPNpn6neKIp/LIKpZmEUUN9sHuONOK76nKB2GGSkTK3oS16OzJgOqxp+8rfhAJQu/fKEN6jIqyek0iETdOPEaPbfgXD+Kz0MGm/LyxA==
+    domain: IMIPRE
+    scope: IMI_BASIC_PRE.Info
+    site: https://appspre.ajuntament.bcn
+    redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/barcelona-rrhh/callback  
 
 development:
   <<: *default
