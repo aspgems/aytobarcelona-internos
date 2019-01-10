@@ -10,3 +10,11 @@ end
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :imipre
 end
+
+if Rails.application.secrets.dig(:omniauth, :imipre, :enabled)
+  Devise.setup do |config|
+    config.omniauth :imipre, scope: :public
+  end
+
+  Decidim::User.omniauth_providers << :imipre
+end
