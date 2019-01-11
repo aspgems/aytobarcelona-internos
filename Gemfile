@@ -7,12 +7,12 @@ ruby RUBY_VERSION
 gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
 
-gem 'decidim', '0.15.1'
-gem 'decidim-consultations', '0.15.1'
-gem 'decidim-debates', '0.15.1'
-gem 'decidim-initiatives', '0.15.1'
-gem 'decidim-sortitions', '0.15.1'
-gem 'decidim-verifications', '0.15.1'
+gem 'decidim', '0.16'
+gem 'decidim-consultations', '0.16'
+gem 'decidim-debates', '0.16'
+gem 'decidim-initiatives', '0.16'
+gem 'decidim-sortitions', '0.16'
+gem 'decidim-verifications', '0.16'
 
 gem 'bootsnap', '~> 1.3'
 
@@ -24,7 +24,7 @@ gem 'faker', '~> 1.9'
 group :development, :test do
   gem 'byebug', '~> 10.0', platform: :mri
 
-  gem 'decidim-dev', '0.15.1'
+  gem 'decidim-dev', '0.16'
 end
 
 group :development do
