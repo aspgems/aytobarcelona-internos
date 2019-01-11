@@ -3,7 +3,7 @@
 require 'omniauth-oauth2'
 require 'open-uri'
 
-module Omniauth
+module OmniAuth
   module Strategies
     # Omniauth client for Imipre
     class Imipre < OmniAuth::Strategies::OAuth2
@@ -46,7 +46,7 @@ module Omniauth
       def authorize_url
         @authorize_url ||= URI.join(
           options.site,
-          "/oauth2/rest/authz?response_type=code&client_id=#{option.client_id}"\
+          "/oauth2/rest/authz?response_type=code&client_id=#{options.client_id}"\
           "&domain=#{Chamber.env.imipre.domain}"\
           "&scope=#{Chamber.env.imipre.scope}"\
           "&redirect_uri=#{Chamber.env.imipre.redirect_uri}"
