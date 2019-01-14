@@ -2,12 +2,6 @@ default: &default
   _secure_geocoder_lookup_app_id: G/m3XMX99Jro2twhO1VR5CI5yEPyM2oG33pAiMzoJNgfTcJ2OuJG1XukSH9678gJThkOvRRSydq1WAYROBOI08/tzBX5hLMXqHSUiLpxU0Cd9pc0lJt6lSLoaWhz3ntMn8pBpAmxyp3lWtu1rKM3y/zKR7nQFgX/DymoMSXpVOX3wRNpLICAxF2cTyWwJ9W33LRzp3F6jehcspnSPsm4I78SsknJ35zVpUYHTSqj2ku/6wKx8gaH9jjHueqXh/i2CIFpcxJsHCq+VgU3T+O1RWCNP30m5QeM8RZ0Kk8NEAimw/JVrzVtc5HJJ0gAL5wTv5nYjte5CdTVyX6nLwVo5g==
   _secure_geocoder_lookup_app_code: KEfGdy7GJyyZaKmBYSznmEFmf83uKBsV7dNig8pBYidmr7ujK97HzB3FmW49fnU3ug/n3kP7S7UY2GlqDT5dEdkW+fgwXXDikZPMCoy3AXAnWE6dN9pHJA/kmZiHusCq0FUEm4S8rx2JUndAY51qrvvZAbLzGJ1FPAqLF0cB89WQRSgU81YVYFVKLccZodAwroIMtomik0YK46G0cmSE4cTF5G1SjxTcH1N+Wg/otmuzpx++ltU9q0y/2k3KhDn1RadQWYizoyyBWhjQ6WT6Gm+5tUCE2T791QYv7zL1kLuSZ7y01MzqTjjRxEj87BYsbqJQWX2LtRhQaQVwEUflsg==
 
-  imipre:
-    domain: IMIPRE
-    scope: IMI_BASIC_PRE.Info
-    site: https://appspre.bcn.cat
-    redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/barcelona-rrhh/callback
-
   smtp:
     _secure_username:
     _secure_password:
@@ -27,3 +21,7 @@ production:
   imipre:
     _secure_client_id: QJ++QBy+UHPeCf3lduM2OBCBqLjo8vNyEBi55Azci+QcaMo2ZmyHFqV52p/igrCjMp1ssLPYZ8flZRS8R9qaA2/Z6PywbZMlU+HLasmNR5HPw57FDezAfpFQs3U5H+uIWIHA5DNMTiDgmvdBqGRT6wja/alTbiAl/Mt84V+CYlsloHP3kbaug5Agnb2z+RJaTnm0OOSl6L7aVeQMJQgVgD7roVU5nCkHoYmV1/llrcwBbtYahQNLbmm7pJiyMnZG9Ep4kM6REOIOkKCTOFP2nTTVzO6sxxtsXysxgFePl4Ijl1wta4Y2lXImWlzBATU7w5rqdRxe8eyf/18gGgPLOg==
     _secure_client_secret: BImiX6USuZK/G7AM6iMM8na6r0bV2mpoT/KmhR+paV0v51NGYsWsAgqkADgKFpSMLuipv+Z290otzMPlREvQChs2f3mEJktAoi50bVBfv0P7Z+aRdTO8K2q6xJiBIwxwzJIw7s8L3CALWHPXhVxYR3xDEeKiv10jW8hOqT7c/bReN5DQ+5sw8GJPg8RQa0IlCjqZXZ2mtN49AjJ+aTSShbSlxD60Pa5nwEe8ZdLKJg+gqLfDPNpn6neKIp/LIKpZmEUUN9sHuONOK76nKB2GGSkTK3oS16OzJgOqxp+8rfhAJQu/fKEN6jIqyek0iETdOPEaPbfgXD+Kz0MGm/LyxA==
+    domain: IMIPRE
+    scope: IMI_BASIC_PRE.Info
+    site: https://appspre.bcn.cat
+    redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/barcelona-rrhh/callback
