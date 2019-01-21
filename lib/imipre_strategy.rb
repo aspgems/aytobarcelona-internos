@@ -46,7 +46,8 @@ module OmniAuth
       def authorize_url
         @authorize_url ||= URI.join(
           options.site,
-          "/oauth2/rest/authz?response_type=code&client_id=#{options.client_id}"\
+          '/oauth2/rest/authz?response_type=code'\
+          "&client_id=#{options.client_id}"\
           "&domain=#{Chamber.env.imipre.domain}"\
           "&scope=#{Chamber.env.imipre.scope}"\
           "&redirect_uri=#{Chamber.env.imipre.redirect_uri}"
