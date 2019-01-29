@@ -9,7 +9,7 @@ default: &default
   imipre:
     domain: IMIPRE
     scope: IMI_BASIC_PRE.Info
-    site: https://appspre.bcn.cat
+    site: https://appspre.ajuntament.bcn
     redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/barcelona-rrhh/callback  
 
 development:
