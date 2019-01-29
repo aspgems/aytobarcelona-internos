@@ -10,7 +10,7 @@ default: &default
     domain: IMIPRE
     scope: IMI_BASIC_PRE.Info
     site: https://vssl.bcn.cat
-    redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/barcelona-rrhh/callback  
+    redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/imipre/callback  
 
 development:
   <<: *default
