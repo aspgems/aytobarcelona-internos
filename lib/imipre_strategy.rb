@@ -13,6 +13,12 @@ module OmniAuth
       option :site, Chamber.env.imipre.site
       option :client_options, {}
 
+      def authorize_params
+        super.tap do |params|
+          params[:scope] = Chamber.env.imipre.scope
+        end
+      end
+
       uid do
         raw_info['id']
       end
