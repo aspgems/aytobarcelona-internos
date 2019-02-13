@@ -9,7 +9,7 @@ end
 
 if Rails.application.secrets.dig(:omniauth, :imipre, :enabled)
   Devise.setup do |config|
-    config.omniauth :imipre, scope: :public
+    config.omniauth :imipre, scope: Chamber.env.imipre.scope
   end
 
   Decidim::User.omniauth_providers << :imipre
