@@ -16,8 +16,12 @@ module OmniAuth
       def authorize_params
         super.tap do |params|
           params[:scope] = Chamber.env.imipre.scope
-          params[:domain] = Chamber.env.imipre.domain
         end
+      end
+
+      def build_access_token
+        options.token_params.merge!(headers: { 'X-OAUTH-IDENTITY-DOMAIN-NAME': 'IMIPRE' })
+        super
       end
 
       uid do
@@ -64,7 +68,7 @@ module OmniAuth
       def token_url
         @token_url ||= URI.join(
           options.site,
-          "/oauth2/rest/token?grant_type=AUTHORIZATION_CODE&domain=#{Chamber.env.imipre.domain}&scope=#{Chamber.env.imipre.scope}&code="
+          "/oauth2/rest/token?grant_type=AUTHORIZATION_CODE&code="
         ).to_s
       end
     end
