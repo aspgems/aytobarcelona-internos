@@ -16,6 +16,7 @@ module OmniAuth
       def authorize_params
         super.tap do |params|
           params[:scope] = Chamber.env.imipre.scope
+          params[:domain] = Chamber.env.imipre.domain
         end
       end
 
