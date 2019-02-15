@@ -9,8 +9,10 @@ end
 
 if Rails.application.secrets.dig(:omniauth, :imipre, :enabled)
   Devise.setup do |config|
-    config.omniauth :imipre, scope: Chamber.env.imipre.scope
+    config.omniauth :imipre, scope: Chamber.env.imipre.scope, domain: Chamber.env.imipre.domain
   end
 
   Decidim::User.omniauth_providers << :imipre
 end
+
+OmniAuth.config.logger = Rails.logger
