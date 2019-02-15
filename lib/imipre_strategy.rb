@@ -17,6 +17,9 @@ module OmniAuth
         super.tap do |params|
           params[:scope] = Chamber.env.imipre.scope
           params[:domain] = Chamber.env.imipre.domain
+          params[:response_type] = 'code'
+          params[:client_id] = options.client_id
+          params[:redirect_uri] = Chamber.env.imipre.redirect_uri
         end
       end
 
