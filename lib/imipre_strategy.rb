@@ -45,7 +45,9 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get(Chamber.env.imipre.info_url).parsed
+        access_token.options[:mode]= :query
+        @raw_info ||= access_token.get(Chamber.env.imipre.info_url, {headers: { 'X-OAUTH-IDENTITY-DOMAIN-NAME': 'IMIPRE' }}
+        ).parsed
       end
 
       # https://github.com/intridea/omniauth-oauth2/issues/81
