@@ -28,3 +28,4 @@ production:
     scope: IMI_BASIC_PRE.Info
     site: https://appspre.ajuntament.bcn
     redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/barcelona-rrhh/callback
+    info_url: https://appspre.ajuntament.bcn/oauth2/rest/token/info?access_token=

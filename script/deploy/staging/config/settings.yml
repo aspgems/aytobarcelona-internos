@@ -25,3 +25,4 @@ production:
     scope: IMI_BASIC_PRE.Info
     site: https://appspre.ajuntament.bcn
     redirect_uri: https:///decidim-pre.ajuntament.bcn/users/auth/imipre/callback
+    info_url: https://appspre.ajuntament.bcn/oauth2/rest/token/info?access_token=

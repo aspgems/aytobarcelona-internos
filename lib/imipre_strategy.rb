@@ -12,6 +12,7 @@ module OmniAuth
       option :client_secret, Chamber.env.imipre.client_secret
       option :site, Chamber.env.imipre.site
       option :client_options, {}
+      option :redirect_uri, Chamber.env.imipre.redirect_uri
 
       def authorize_params
         super.tap do |params|
@@ -25,14 +26,14 @@ module OmniAuth
       end
 
       uid do
-        raw_info['id']
+        raw_info['sub']
       end
 
       # TODO: Check raw info content for user type
       info do
         {
-          email: raw_info['email'],
-          name: raw_info['name']
+          email: "#{raw_info['sub']}@imipre.com",
+          name: raw_info['sub']
         }
       end
 
@@ -44,7 +45,7 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= access_token.get('/oauth/me').parsed
+        @raw_info ||= access_token.get(Chamber.env.imipre.info_url).parsed
       end
 
       # https://github.com/intridea/omniauth-oauth2/issues/81
