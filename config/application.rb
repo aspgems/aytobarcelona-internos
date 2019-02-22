@@ -15,5 +15,22 @@ module Internos
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # Load chamber settings because we use it in this file
+    Chamber.load files: [Rails.root + 'config/settings.yml', Rails.root + 'config/settings/**/*.{yml,yml.erb}'],
+                 decryption_key: Rails.root + 'config/chamber.pem',
+                 namespaces: {
+                   environment: -> { ::Rails.env },
+                   hostname:    -> { Socket.gethostname } }
+    # We need to initialize before load_environment_config because railties initialize it before config with default
+    # parameters.
+    initializer 'internos.chamber.load', before: :load_environment_config do
+      Chamber.load files: [Rails.root + 'config/settings.yml', Rails.root + 'config/settings/**/*.{yml,yml.erb}'],
+                   decryption_key: Rails.root + 'config/chamber.pem',
+                   namespaces: {
+                     environment: -> { ::Rails.env },
+                     hostname:    -> { Socket.gethostname } }
+    end
+
   end
 end
