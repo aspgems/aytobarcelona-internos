@@ -20,3 +20,17 @@ user.save!
 6. Fill the rest of the form and submit it.
 
 You're good to go!
+
+## Carga de usuarios de IMIPRE
+Para cargar la csv hay que: 
+1. meterla dentro de la carpeta tmp con el nombre employees.csv 
+2. ejecutar bundle exec rake employees:load
+
+Al autenticar con OAUTH comprueba que los campos del csv tengan el estado activo y el tipo T1
+
+Ejemplo de csv:
+```
+Matricula;Cognoms;Nom;mail;Estat;Tipus d'Empleat
+D541383;MIRO MIRANDA;JORDI;jmirom@bcn.cat;ACTIVE;T1
+```
+
