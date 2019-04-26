@@ -26,15 +26,21 @@ module OmniAuth
       end
 
       uid do
+        employee = Employee.find_by!(code: raw_info['sub'])
         raw_info['sub']
       end
 
       # TODO: Check raw info content for user type
       info do
-        {
-          email: "#{raw_info['sub']}@imipre.com",
-          name: raw_info['sub']
-        }
+        employee = Employee.find_by!(code: raw_info['sub'])
+        if employee.status == 'ACTIVE' && employee.employee_type == 'T1'
+          {
+            email: employee.email,
+            name: "#{employee.name} #{employee.surnames}"
+          }
+        else
+          false
+        end
       end
 
       def client

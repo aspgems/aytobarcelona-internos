@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_11_141567) do
+ActiveRecord::Schema.define(version: 2019_04_26_115619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1382,6 +1382,18 @@ ActiveRecord::Schema.define(version: 2019_01_11_141567) do
     t.index ["nickname", "decidim_organization_id"], name: "index_decidim_users_on_nickame_and_decidim_organization_id", unique: true, where: "((deleted_at IS NULL) AND (managed = false))"
     t.index ["officialized_at"], name: "index_decidim_users_on_officialized_at"
     t.index ["reset_password_token"], name: "index_decidim_users_on_reset_password_token", unique: true
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.string "surnames"
+    t.string "email"
+    t.string "status"
+    t.string "employee_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_employees_on_code", unique: true
   end
 
   create_table "oauth_access_grants", force: :cascade do |t|
