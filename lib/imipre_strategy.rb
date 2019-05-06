@@ -21,7 +21,7 @@ module OmniAuth
       end
 
       def build_access_token
-        options.token_params.merge!(headers: { 'X-OAUTH-IDENTITY-DOMAIN-NAME': 'IMIPRE' })
+        options.token_params.merge!(headers: { 'X-OAUTH-IDENTITY-DOMAIN-NAME': Chamber.env.imipre.domain })
         super
       end
 
