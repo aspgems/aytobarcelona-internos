@@ -12,13 +12,13 @@ default: &default
   _secure_secret_key_base: fTsKZRPt9waZ4qzxWl8Og4GwWIEOL4weA6B8iFy6c/nXqQ956cycig5sn45eQQNB4V+8w4WxjG457VhrqKSIKWCWD+rjYAs17akdSy8ytfl7BdO1h2LzDPMq9y+oElljilwQ6M3czWqJ7JwCeSe0twhzNJxYYXG7DLccLr1H4m1MF0bisUUxs8i7BaKu+jG27j42RmxE+tXB+R+E5eqnyodIK1Dey4GoqpYFFJBv7MnypX060DekxtwMisyJT/cjmYWmsSkXripjJVTUPULjmlmVp6n+xLnTfIdsHyEitbgtsVZp4cmVKGkL3xTcov5tTELuOQpjkHCg1xt/UpBelg==#oqkfsfkYS+CQXvJXA+KqqA==#T/p3ACcDkIleAUZ0/O1kr0exkAPFptyA2PxSA0LY7hn3FN/+Wi6X82GWOdEL0b8Hbz1q08Oktfgv8+lZnDjBWfRGlTJIR5uWKhpJOY018v1cTMtYw+4H7OsAPx3O8FX3aB/V7U4e7+EZAsqqC3LyD7ZEmaMBSisa6Ix0SLxqZIYUiLjZ7umOcRnt7V2DCUCS
 
   imipre:
-    _secure_client_id: FpEGFF1rf/+XgNV9/Fy3W4YFmBn2R1oYLnbnK7U8ndwr8iuitT+y30U3Rtq2ZY6Cdo1cr/0bJzvQK+RZqHT6CAGZ8zVNX1h6Qm6KLNb8JUEHKks5YJ6UKVD1DnyrO0gtHC4xN9E86Lseg6HVN9sbVqGKGqDPyqSHH+LnkbCcRkJMmLFzhGiVaEBFJ2Tfp6mqlDAKwbR5u4fZ7dxKKedNiMpAdPFoEaVSh9ERcPdlWaxluF74pgTcUJVHXhsfjP+yYS+h/lQnjwYSY3ioFa439/z2MJH/LkB150aqgxR9nAXxKuWCoK5v60eWvzzaa1kA5qoPUhqt/ccynD2gLu3zrA==
-    _secure_client_secret: PAkyJnVtKQ426Zh8GT8Dub2Hh4YsppOC6vM447F9NqjVr1CZ+h2WBTZlHcdG2cv4N48KnFsikTKP1J/XnU9/79GR4D7oKqKEfMoZj+BH3uYgL/ZxFB6XPxmfQLBf3PeDJodT6XMfqYYCr3NJNtfKwvAbmARXaQ/sCrJC2MsVQmWjiSZshWa2/TijZz4gHyX5llW6IHzZpEE2Kov1GG1k4q/z7QM3VczgNMrlZP9UQrv8L28HIT1Ikha1zkfxYAgzMgURALqFr5VnfTyLuP60UkRiQKVIj9mv1OjjPTj8TUQrvAiRlJV5ESiVNnb/kyJpQs0UcqLfINckhvUPqwBU6g==
-    domain: IMIPRE
-    scope: IMI_BASIC_PRE.Info
-    site: https://appspre.ajuntament.bcn
-    redirect_uri: https:///decidim-pre.ajuntament.bcn/users/auth/imipre/callback
-    info_url: https://appspre.ajuntament.bcn/oauth2/rest/token/info?access_token=
+    _secure_client_id: nqQOm6U3oe6Os4aakqndu6F/tr1zzXHMPdHeSnSyA3Krw/J0Daf1fFpJs/pZRFEZs+Xc39ie7eLGCSjrp7A+XvC7terRKNHI94XVNDZWAju/U641isR3SWKhKDcM/E9491nQdzSyLOXInb0y6XIOs9IAOfMCJYkgT9CQWvgRHFDgLSKNVr1T0OcYWX13qO0cknUQgj0FNl5ZCZS/AdGYGBpEC53XpnMB6sdDzOut2xfZmxFkcSzNMILtVrOsqUDRiJHDlAUTa3FWthjRgnQ6gyVjXAMNvbSrCgZEnPyQhe6iOBkAB/4S6ygMFuPat0d0uauYHPezUnczHTdc9JfahQ==
+    _secure_client_secret: mm+nfUEJb74uIe1qZc0J8IHSy2HtBFY4ksAiCl68+/uNDxTB5edM8vO52mMXQP7ni9Ysug7tYwgrlP1LlTuSVhOCuRgpAcN8Rx05Q3ZX5WkDa+HEFDkRgkEVtVQzm8WDVTvEL1uFiYrEJG32vZLLSDCKc749Ap3gBVCFTJuGl2Pb6CKjzAjiqr2fs21jWs5Ik8pw3jeqdx07+C+J79/mLD1sIxSyKBN0cOwijaLI5/jVK8w0UYl7hg9VMKppZ+9PvQpO48z/Xk+e1CP+7kshlefmCFUSMeauePaaXmPH47jQxHPxkVr8gdE+rcvYyb00zysEe0UhHSoRITbp6h2EZA==
+    domain: IMIPRO
+    scope: IMI_BASIC_PRO.Info
+    site: https://acces.bcn.cat
+    redirect_uri: https://decidim.ajuntament.bcn/users/auth/imipre/callback
+    info_url: https://acces.bcn.cat/oauth2/rest/token/info?access_token=
 
 development:
   <<: *default
