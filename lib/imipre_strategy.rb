@@ -52,7 +52,7 @@ module OmniAuth
 
       def raw_info
         access_token.options[:mode]= :query
-        @raw_info ||= access_token.get(Chamber.env.imipre.info_url, {headers: { 'X-OAUTH-IDENTITY-DOMAIN-NAME': 'IMIPRE' }}
+        @raw_info ||= access_token.get(Chamber.env.imipre.info_url, {headers: { 'X-OAUTH-IDENTITY-DOMAIN-NAME':  Chamber.env.imipre.domain }}
         ).parsed
       end
 
