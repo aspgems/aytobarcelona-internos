@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Decidim.configure do |config|
-  config.application_name = 'Decidim RRHH'
-  config.mailer_sender = 'no-reply@aspgems.com'
+  config.application_name = 'Decidim Ajuntament de Barcelona'
+  config.mailer_sender = 'svc_decidim@bcn.cat'
 
   # Change these lines to set your preferred locales
   config.default_locale = :ca
