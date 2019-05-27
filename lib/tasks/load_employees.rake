@@ -14,6 +14,11 @@ namespace :employees do
         employee.status = hash['Estat']
         employee.employee_type = hash["Tipus d'Empleat"]
       end.save!
+      user = Dedidim::User.where(email: employee.email).first
+      if user
+        user.name = "#{employee.name} #{employee.surnames}"
+        user.save
+      end
     end
   end
 end
