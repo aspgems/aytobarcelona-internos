@@ -13,6 +13,7 @@ gem 'decidim-debates', '0.16'
 gem 'decidim-initiatives', '0.16'
 gem 'decidim-sortitions', '0.16'
 gem 'decidim-verifications', '0.16'
+gem 'decidim-direct_verifications', '0.2.2'
 
 gem 'bootsnap', '~> 1.3'
 
