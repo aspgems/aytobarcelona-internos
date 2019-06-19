@@ -7,11 +7,11 @@ ruby RUBY_VERSION
 gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
 
-gem 'decidim', :git => 'https://github.com/demonodojo/decidim.git'
-gem 'decidim-consultations', '~> 0.19.0.dev'
-gem 'decidim-debates', '~> 0.19.0.dev'
-gem 'decidim-sortitions', '~> 0.19.0.dev'
-gem 'decidim-verifications', '~> 0.19.0.dev'
+gem 'decidim', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
+gem 'decidim-consultations', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
+gem 'decidim-debates', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
+gem 'decidim-sortitions', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
+gem 'decidim-verifications', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
 gem 'decidim-direct_verifications', '0.17.8'
 
 gem 'bootsnap', '~> 1.3'
