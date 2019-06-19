@@ -7,11 +7,11 @@ ruby RUBY_VERSION
 gem 'activerecord-session_store'
 gem 'chamber', '~> 2.10.1'
 
-gem 'decidim', '~> 0.17.1'
-gem 'decidim-consultations', '~> 0.17.1'
-gem 'decidim-debates', '~> 0.17.0'
-gem 'decidim-sortitions', '~> 0.17.0'
-gem 'decidim-verifications', '~> 0.17.0'
+gem 'decidim', :git => 'https://github.com/demonodojo/decidim.git'
+gem 'decidim-consultations', '~> 0.19.0.dev'
+gem 'decidim-debates', '~> 0.19.0.dev'
+gem 'decidim-sortitions', '~> 0.19.0.dev'
+gem 'decidim-verifications', '~> 0.19.0.dev'
 gem 'decidim-direct_verifications', '0.17.8'
 
 gem 'bootsnap', '~> 1.3'
@@ -26,7 +26,7 @@ gem 'httplog'
 group :development, :test do
   gem 'byebug', '~> 10.0', platform: :mri
 
-  gem 'decidim-dev', '~> 0.17.1'
+  #gem 'decidim-dev', '~> 0.17.1'
 end
 
 group :development do
