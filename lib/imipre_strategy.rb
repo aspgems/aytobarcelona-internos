@@ -7,7 +7,7 @@ module OmniAuth
   module Strategies
     # Omniauth client for Imipre
     class Imipre < OmniAuth::Strategies::OAuth2
-      option :name, :imipre
+      option :name, 'usuari corporatiu'
       option :client_id, Chamber.env.imipre.client_id
       option :client_secret, Chamber.env.imipre.client_secret
       option :site, Chamber.env.imipre.site

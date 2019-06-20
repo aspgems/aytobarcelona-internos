@@ -629,10 +629,7 @@ DEPENDENCIES
   chamber (~> 2.10.1)
   decidim!
   decidim-consultations!
-  decidim-debates!
   decidim-direct_verifications (= 0.17.8)
-  decidim-sortitions!
-  decidim-verifications!
   faker (~> 1.9)
   httplog
   letter_opener_web (~> 1.3)
@@ -645,7 +642,7 @@ DEPENDENCIES
   web-console (~> 3.5)
 
 RUBY VERSION
-   ruby 2.5.4p155
+   ruby 2.5.3p105
 
 BUNDLED WITH
    1.17.2
