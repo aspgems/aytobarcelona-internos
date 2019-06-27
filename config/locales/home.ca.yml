@@ -1,0 +1,5 @@
+ca:
+  devise:
+    shared:
+      links:
+        sign_in_with_provider: Inicia sessió amb usuari corporatiu
