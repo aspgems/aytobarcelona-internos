@@ -33,7 +33,7 @@ module OmniAuth
       # TODO: Check raw info content for user type
       info do
         employee = Employee.find_by!(code: raw_info['sub'])
-        if employee.status == 'ACTIVE' && employee.employee_type == 'T1'
+        if employee.present?
           {
             email: employee.email,
             name: "#{employee.name} #{employee.surnames}"
