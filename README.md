@@ -34,3 +34,27 @@ Matricula;Cognoms;Nom;mail;Estat;Tipus d'Empleat
 D541383;MIRO MIRANDA;JORDI;jmirom@bcn.cat;ACTIVE;T1
 ```
 
+## Borrado de respuesta a una encuesta de un usuario
+
+Para obtener el usuario:
+u = Decidim::User.where(email: Employee.where(code: 'B611460').first.email).first
+
+Para poder ver el nombre de las encuestas que hay:
+
+Decidim::Surveys::Survey.all.map(&:component)
+
+te quedas con el id del component que se corresponda con la encuesta y obtienes la encuesta
+
+s = Decidim::Surveys::Survey.where(decidim_component_id: 5).last
+
+Obtienes el cuestionario de la encuesta:
+
+q = Decidim::Forms::Questionnaire.includes(:questionnaire_for).where(questionnaire_for: s)
+
+Y obtienes las respuestas al cuestionario del usuario
+
+a = Decidim::Forms::Answer.joins(:questionnaire).where(questionnaire: q).where(decidim_user_id: u.id)
+
+finalmente se borran las respuestas:
+
+a.destroy_all
