@@ -15,6 +15,10 @@ default: &default
   geocoder_lookup_app_id: <%= ENV["HERE_APP_ID"] %>
   geocoder_lookup_app_code: <%= ENV["HERE_APP_CODE"] %>
 
+  saml:
+    idp_cert_fingerprint: 'CD:33:71:E7:E6:CC:B3:42:9C:06:F4:B0:6C:CF:C8:EA:2C:12:6D:6A'
+    idp_sso_target_url: 'https://accespre.bcn.cat/oamfed/idp/samlv20'
+
 development:
   <<: *default
   secret_key_base: 4de720903a5d5f54094210f69423493dfdc56413a42907f7684766bff965695c0deec064fc03eff5c1e34fff618f70bdcac7127d853d6a0e5a4c48ccc267f2ad

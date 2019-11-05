@@ -26,3 +26,7 @@ production:
     site: https://appspre.ajuntament.bcn
     redirect_uri: https:///decidim-pre.ajuntament.bcn/users/auth/imipre/callback
     info_url: https://appspre.ajuntament.bcn/oauth2/rest/token/info?access_token=
+  saml:
+    idp_cert_fingerprint: 'CD:33:71:E7:E6:CC:B3:42:9C:06:F4:B0:6C:CF:C8:EA:2C:12:6D:6A'
+    idp_sso_target_url: 'https://accespre.bcn.cat/oamfed/idp/samlv20'
+

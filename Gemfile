@@ -10,6 +10,7 @@ gem 'chamber', '~> 2.10.1'
 gem 'decidim', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
 gem 'decidim-consultations', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
 gem 'decidim-direct_verifications', '0.17.8'
+gem 'omniauth-saml'
 
 gem 'bootsnap', '~> 1.3'
 

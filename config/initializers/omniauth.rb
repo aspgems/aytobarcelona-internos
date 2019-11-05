@@ -15,4 +15,15 @@ if Rails.application.secrets.dig(:omniauth, :imipre, :enabled)
   Decidim::User.omniauth_providers << :imipre
 end
 
+if Rails.application.secrets.dig(:omniauth, :saml, :enabled)
+  Devise.setup do |config|
+    config.omniauth :saml,
+                    idp_cert_fingerprint: Chamber.env.saml.idp_cert_fingerprint,
+                    idp_sso_target_url: Chamber.env.saml.idp_sso_target_url,
+                    strategy_class: ::OmniAuth::Strategies::SAML
+  end
+
+  Decidim::User.omniauth_providers << :saml
+end
+
 OmniAuth.config.logger = Rails.logger
