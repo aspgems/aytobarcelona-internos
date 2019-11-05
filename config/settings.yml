@@ -5,12 +5,16 @@ default: &default
     address: localhost
     domain: example.com
     port: 25
-  
+
   imipre:
     domain: IMIPRE
     scope: IMI_BASIC_PRE.Info
     site: https://appspre.ajuntament.bcn
-    redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/imipre/callback  
+    redirect_uri: https://aytobarcelona-decidim.dev.aspgems.com/users/auth/imipre/callback
+
+  saml:
+    idp_sso_target_url: https://accespre.bcn.cat/oamfed/idp/samlv20
+    idp_cert_fingerprint: 50:E8:DD:37:7C:BA:A3:BD:72:2F:EC:6B:EC:81:C3:D1:A0:53:E5:0C:F4:6D:D7:7E:1A:1C:BD:FB:8F:00:2C:6C
 
 development:
   <<: *default

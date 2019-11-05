@@ -10,6 +10,7 @@ gem 'chamber', '~> 2.10.1'
 gem 'decidim', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
 gem 'decidim-consultations', git: 'https://github.com/demonodojo/decidim.git', branch: 'bugfixing'
 gem 'decidim-direct_verifications', '0.17.8'
+gem "decidim-saml", path: "decidim-saml"
 
 gem 'bootsnap', '~> 1.3'
 
@@ -22,6 +23,7 @@ gem 'httplog'
 
 group :development, :test do
   gem 'byebug', '~> 10.0', platform: :mri
+  gem 'rb-readline'
 
   #gem 'decidim-dev', '~> 0.17.1'
 end
