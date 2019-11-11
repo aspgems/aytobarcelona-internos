@@ -15,6 +15,14 @@ default: &default
   geocoder_lookup_app_id: <%= ENV["HERE_APP_ID"] %>
   geocoder_lookup_app_code: <%= ENV["HERE_APP_CODE"] %>
 
+  saml:
+    idp_sso_target_url: <%= ENV['IDP_SSO_TARGET_URL'] %>
+    idp_cert: <%= ENV['IDP_CERT'] %>
+    certificate: <%= ENV['CERTIFICATE'] %>
+    private_key: <%= ENV['PRIVATE_KEY'] %>
+    sp_entity_id: <%= ENV['SP_ENTITY_ID'] %>
+    user_types: ['T1', 'T2', 'T3', 'T11']
+
 development:
   <<: *default
   secret_key_base: 4de720903a5d5f54094210f69423493dfdc56413a42907f7684766bff965695c0deec064fc03eff5c1e34fff618f70bdcac7127d853d6a0e5a4c48ccc267f2ad

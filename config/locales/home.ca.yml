@@ -1,5 +1,7 @@
 ca:
   devise:
+    failure:
+      invalid_user_type: El teu tipus d'usuari no és vàlid
     shared:
       links:
         sign_in_with_provider: Inicia sessió amb compte corporatiu
