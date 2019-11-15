@@ -41,10 +41,24 @@ if Rails.application.secrets.dig(:omniauth, :saml, :enabled)
 
     def verify_user_type
       saml_response = OneLogin::RubySaml::Response.new(params['SAMLResponse'])
-      unless saml_response.attributes[:tipusUsuari].in? Chamber.env.saml.user_types
+      unless valid_user?(saml_response)
         flash[:error] = I18n.t("devise.failure.invalid_user_type")
         redirect_to root_path
       end
+    end
+
+    private
+
+    def valid_user?(response)
+      valid_cn?(response.attributes[:ACL]) || valid_type?(response.attributes[:tipusUsuari])
+    end
+
+    def valid_cn?(acl)
+      /cn=#{Chamber.env.saml.cn}(,|\b)/i.match? acl
+    end
+
+    def valid_type?(type)
+      type&.in? Chamber.env.saml.user_types
     end
   end
 
