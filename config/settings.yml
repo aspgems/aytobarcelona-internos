@@ -22,6 +22,7 @@ default: &default
     private_key: <%= ENV['PRIVATE_KEY'] %>
     sp_entity_id: <%= ENV['SP_ENTITY_ID'] %>
     user_types: ['T1', 'T2', 'T3', 'T11']
+    cn: 'ACCES'
 
 development:
   <<: *default
