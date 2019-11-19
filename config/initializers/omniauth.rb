@@ -50,15 +50,15 @@ if Rails.application.secrets.dig(:omniauth, :saml, :enabled)
     private
 
     def valid_user?(response)
-      valid_cn?(response.attributes[:ACL]) || valid_type?(response.attributes[:tipusUsuari])
+      valid_cn?(response.attributes.multi(:ACL)) || valid_type?(response.attributes.multi(:tipusUsuari))
     end
 
-    def valid_cn?(acl)
-      /cn=#{Chamber.env.saml.cn}(,|\b)/i.match? acl
+    def valid_cn?(acl_list)
+      acl_list.any? { |acl| /cn=#{Chamber.env.saml.cn}(,|\b)/i.match? acl }
     end
 
-    def valid_type?(type)
-      type&.in? Chamber.env.saml.user_types
+    def valid_type?(type_list)
+      type_list.any? { |type| type.in? Chamber.env.saml.user_types }
     end
   end
 
